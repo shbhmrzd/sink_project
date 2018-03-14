@@ -5,12 +5,16 @@ public class SimpleDotComTestDrive {
 
     public static void main(String[] args) {
 
-        SimpleDotCom dot = new SimpleDotCom();
+        //SimpleDotCom dot = new SimpleDotCom();
+        DotCom dot = new DotCom();
         int numOfGuesses = 0;
         Scanner scanner = new Scanner(System.in);
         String result = null;
         int start = (int) (Math.random()*5);
-        int[] locations = {start,start+1,start+2};
+        ArrayList<Integer> locations = new ArrayList<Integer>();
+        locations.add(start);
+        locations.add(start+1);
+        locations.add(start+2);
         dot.setLocationCells(locations);
 
         while(result == null || !result.equals("kill")){

@@ -2,20 +2,12 @@ import java.lang.*;
 
 public class SimpleDotCom {
 
-    int[] locations = new int[3];
-    int numOfHits = 0;
+    private int[] locations = new int[3];
+    private int numOfHits = 0;
 
     public String checkYourself(String stringGuess){
         String result = "miss";
         int guess = Integer.parseInt(stringGuess);
-
-//        for(int cells : locations){
-//            if(guess == cells){
-//                numOfHits++;
-//                result = "hit";
-//                break;
-//            }
-//        }
 
         for(int i=0;i<3;i++){
             if(locations[i]==guess){
