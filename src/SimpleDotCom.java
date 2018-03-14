@@ -9,9 +9,18 @@ public class SimpleDotCom {
         String result = "miss";
         int guess = Integer.parseInt(stringGuess);
 
-        for(int cells : locations){
-            if(guess == cells){
+//        for(int cells : locations){
+//            if(guess == cells){
+//                numOfHits++;
+//                result = "hit";
+//                break;
+//            }
+//        }
+
+        for(int i=0;i<3;i++){
+            if(locations[i]==guess){
                 numOfHits++;
+                locations[i]=0;   //setting the dot_com cordinate to 0 once that particular index has been hit
                 result = "hit";
                 break;
             }
